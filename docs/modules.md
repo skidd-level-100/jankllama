@@ -102,5 +102,7 @@ bot
 
 ```
 
+now open 'code/main.sh' and towards the bottom find the part that runs llama, the add a luanch option of '-r "\</nuke\>" '
+
 
 __I have not tesed this in action, so there might be code mistakes.__
