@@ -23,16 +23,15 @@ export notes_file="$HOME/.llama/interceptor/notes.txt" # the note function requi
 
 export writeablehome="/home/bumpsh/.llama/interceptor/writeable-home" # this will give the bots shell a writable folder to use inside of the container in /root
 
-export input="$root_dir/input"
+export input="$root_dir/input" # where user input in temporarly stored
 
 
 
 mkdir -p "$root_dir" # ensures folder(s) exist
 mkdir -p "$HOME/.llama/prompts/" # ensures folder(s) exist
 script_path="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )" # grabs the directory that the main.sh file is located in
+
 export script_path="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )" # grabs the directory that the main.sh file is located in
-
-
 export modules_path="$script_path/modules" # where the script will find modules
 
 

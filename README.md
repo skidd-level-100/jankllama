@@ -54,7 +54,7 @@ just set these to the appropriate path/value
             - setup the container with tools you want
                 - commit the container to the name 'aibox'
 
-- modify podmans launch options in code/modules/function_shell.sh
+- modify podmans launch options in 'code/modules/function_shell.sh'
     - if you want to you can replace the 'podman' section of the command with 'docker' and in *theory* it will work fine.
 - for docker mains
     - podman networks are different than docker, that you will need to look into
