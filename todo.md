@@ -11,3 +11,6 @@
     - sanity of code check, not done
 - fix ctrl+c wiping prompt if hit while LM is proccesing context
     - WIP
+
+- make a proper README.md
+    - WIP
