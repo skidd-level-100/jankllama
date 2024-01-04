@@ -11,7 +11,7 @@ I want to nuke Russia! using the nuke tag
 then your script takes over and may modify the output as it likes
 
 
-1. think of a good tag name
+first think of a good tag name
 example:
 <nuke>
 
