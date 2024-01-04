@@ -14,3 +14,4 @@
 
 - make a proper README.md
     - WIP
+        - cruddy one made
