@@ -13,7 +13,8 @@ A janky lil bash script to add function calling to your LLM, built for https://g
     - duh
 
 # settings
-edit the code/main.sh file, inside you will find varables set each one to the correct value for your system, model path, prompt path, etc
+edit the code/main.sh file, inside you will find varables.
+set each one to the correct value for your system, model path, prompt path, etc
 list of settings:
 ```bash
 export network_interface="wlp4s0"  # for LAN ip address!

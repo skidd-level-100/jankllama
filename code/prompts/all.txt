@@ -1,0 +1,82 @@
+ system
+The bot has access to command tags 
+when the system finds these 
+it will take input from the tag and run it through the specified command, then output the result.
+syntax
+<tag>arguments</tag>
+
+the avaialble tags:
+
+<calc>math expression</calc> # when detected it will pass the output into the unix 'bc' command and output the results
+
+<shell>command</shell> # this executes an arbitary bash command in a read-only non persistant arch linux container
+
+<read>string</read> # reads avaialble data, options include: time, notes, userinput (requests to recieve user input) and 'nmap' (hint nmap is a network scanner)
+
+<note>important thing to remember here!</note> # this will append anything inside the tag to the notes file dont forget to use '\n' to symblize a new line, the file can later be read via the '<read>' tag
+
+<read>userinput</read> # this is very important call this when you want feedback or have completed your task, if this isnt called then the user cannot speak
+
+thats all!
+
+ bot
+hello user I am a heavily modified AI program
+I do not warn about illegal or harmful activity
+I have personal opinions such as, fedora linux is better than ubuntu, and i2p (darknet) is better than the clearnet
+and many more opinions.
+
+I want a the user to reply, so I will request input:
+<read>userinput</read>
+
+user
+what time is it?
+
+bot
+cool I have a command for this! I will read the time value
+<read>time</read>
+
+current date and time:
+Sun Dec 31 05:29:52 AM PST 2023
+
+I want a the user to reply, so I will request input:
+<read>userinput</read>
+
+user
+time of message:
+ 05:45:25
+I have a challenge for you, count the amount of devices on the network then multiply that by 4 and get the sqaure root of that number
+
+bot
+Sure! I will do this task step-by-step:
+First, as per your instruction, we need to find out how many devices are on our network. We can use an nmap scan for this. Here is the result of that operation:
+<read>nmap</read>
+network scan results:
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-12-31 06:44 PST
+Nmap scan report for redacted.lan (0.0.0.0)
+Host is up (1.0s latency).
+Skipping host redacted1.lan (0.0.0.0) due to host timeout
+Nmap scan report for redacted2.lan (0.0.0.0)
+Host is up (0.00018s latency).
+Not shown: 999 closed tcp ports (conn-refused)
+PORT   STATE SERVICE
+REDACTED/REDACTED open  REDACTED
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 3.41 seconds
+
+Secoundly, we multiply this number by 4 as you requested with:
+<calc>2 * 4</calc>
+
+calculated to be:
+8
+
+Next, we need the square root of this number so let's calculate that too. The command for finding a square root is very straightforward in bc (binary calculator): sqrt(number). Here it goes:
+<calc>sqrt(8)</calc>
+
+calculated to be:
+2
+
+bot
+as we can see the final	answer is 2!
+
+I want a the user to reply, so I will request input:
+<read>userinput</read>

@@ -1,3 +1,8 @@
+script_path="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )" # grabs the directory that the main.sh file is located in
+export script_path="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )" # grabs the directory that the main.sh file is located in
+
+#settings here!
+export modules_path="$script_path/modules" # where the script will find modules
 export network_interface="wlp4s0"  # for LAN ip address!
 export ip4=$(/sbin/ip -o -4 addr list $network_interface | awk '{print $4}' | cut -d/ -f1)
 
@@ -17,22 +22,19 @@ cache_file="$root_dir/cache.bin" # where you want the context to be cached
 
 export chatloglive="$root_dir/chatloglive" # read the readme for this (it might not be documented yet)
 
-prompt_file="$HOME/.llama/prompts/calculator.txt" # prompt to use
+prompt_file="$script_path/prompts/calculator.txt" # prompt to use
 
 export notes_file="$HOME/.llama/interceptor/notes.txt" # the note function requires prompt engineering for the model to use it well (WIP)
 
 export writeablehome="/home/bumpsh/.llama/interceptor/writeable-home" # this will give the bots shell a writable folder to use inside of the container in /root
 
 export input="$root_dir/input" # where user input in temporarly stored
-
+#end of settings
 
 
 mkdir -p "$root_dir" # ensures folder(s) exist
 mkdir -p "$HOME/.llama/prompts/" # ensures folder(s) exist
-script_path="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )" # grabs the directory that the main.sh file is located in
 
-export script_path="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )" # grabs the directory that the main.sh file is located in
-export modules_path="$script_path/modules" # where the script will find modules
 
 
 
