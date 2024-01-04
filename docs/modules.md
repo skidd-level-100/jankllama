@@ -13,7 +13,7 @@ then your script takes over and may modify the output as it likes
 
 first think of a good tag name
 example:
-<nuke>
+'<nuke>'
 
 # varables
 The main.sh will have given you a varable called "string" this is the bottom line of the llama.cpp's output
