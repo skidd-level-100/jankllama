@@ -11,7 +11,7 @@ I want to nuke Russia! using the nuke tag
 then your script takes over and may modify the output as it likes
 
 
-first think of a good tag name like "<nuke>"
+first think of a good tag name like "\<nuke\>"
 
 # varables
 The main.sh will have given you a varable called "string" this is the bottom line of the llama.cpp's output
