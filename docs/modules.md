@@ -47,27 +47,10 @@ $cmd_output
 
 bot\n " >> "$chatloglive"
 
-else
-echo -e "\n 
-
-system
-Nuke status:
-No location provided
-
-bot\n " >> "$chatloglive"
-
 fi
 ```
 ## The first if statment 
-it will check that the text is not empty, if it is not empty it will execute the rest, if not it will append:
-```
-system
-Nuke status:
-No location provided
-
-bot
-```
-to the bots context (prompt)
+it will check that the text is not empty, if it is not empty it will execute the rest
 
 ## The secound if statement
 it will check if the target is 'USA'
@@ -110,3 +93,8 @@ bash $modules_path/FUNCTION_NAME.sh
 
 
 __I have not tested this in action, so there might be code mistakes.__
+
+
+# prompting
+
+[here!](prompting.md)
