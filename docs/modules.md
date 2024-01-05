@@ -102,7 +102,11 @@ bot
 
 ```
 
-now open 'code/main.sh' and towards the bottom find the part that runs llama, the add a luanch option of '-r "\</nuke\>" '
+now open 'code/main.sh' and towards the bottom find the part that runs llama, the add a launch option of '-r "\</nuke\>" '
+after that add your script into code/modules/scan.sh, at the bottom
+```bash
+bash $modules_path/FUNCTION_NAME.sh
+```
 
 
-__I have not tesed this in action, so there might be code mistakes.__
+__I have not tested this in action, so there might be code mistakes.__
