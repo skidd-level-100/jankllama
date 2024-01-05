@@ -1,3 +1,4 @@
+#!/bin/bash -x
 cmd="$(echo "$string" | grep -Eo  "<nuke>.*</nuke>" | sed 's/<nuke>//g' | sed 's/<\/nuke>//g')"
 
 if [ "$cmd" ]; then 
@@ -13,15 +14,6 @@ echo -e "\n
 system
 Nuke status:
 $cmd_output 
-
-bot\n " >> "$chatloglive"
-
-else
-echo -e "\n 
-
-system
-Nuke status:
-No location provided
 
 bot\n " >> "$chatloglive"
 

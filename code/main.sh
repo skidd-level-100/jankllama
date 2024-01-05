@@ -22,7 +22,7 @@ cache_file="$root_dir/cache.bin" # where you want the context to be cached
 
 export chatloglive="$root_dir/chatloglive" # read the readme for this (it might not be documented yet)
 
-prompt_file="$script_path/prompts/calculator.txt" # prompt to use
+prompt_file="$script_path/prompts/example.txt" # prompt to use
 
 export notes_file="$HOME/.llama/interceptor/notes.txt" # the note function requires prompt engineering for the model to use it well (WIP)
 
@@ -66,6 +66,6 @@ cp "$chatloglive" "$root_dir/currentchatlog" # backs up the file that will be wr
 rm "$chatloglive" # removes the file to be written to
 touch "$chatloglive" # re-creates it to be sure
 # the '| tee -a' part of the command appends all of the prompt back into "$chatloglive"
-$main_path --ignore-eos -t $threads -m $model_path --color  -r "</calc>" -r "</note>" -r "</read>"  -r "</shell>" -c $ctx --temp $temp --repeat_penalty $rpp -n -1 -p "$(cat "$root_dir/currentchatlog")" --log-disable -ngl $ngl --prompt-cache "$cache_file " | tee -a "$chatloglive"
+$main_path --ignore-eos -t $threads -m $model_path --color  -r "</calc>" -r "</note>" -r "</nuke>" -r "</read>"  -r "</shell>" -c $ctx --temp $temp --repeat_penalty $rpp -n -1 -p "$(cat "$root_dir/currentchatlog")" --log-disable -ngl $ngl --prompt-cache "$cache_file " | tee -a "$chatloglive"
 check # checks for function tags
 done
